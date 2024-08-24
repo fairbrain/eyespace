@@ -58,11 +58,11 @@ box-shadow: 5px 5px 10px #A2A2A2;
   .social-icons a {
     display: block;
     margin: 10px 0;
-    font-size: 15px;
+    font-size: 20px;
     color: #ffffff;
     background-color: #000;
     box-shadow: 0 5px 10px #06cac4;
-    padding: 5px 9px;
+    padding: 5px 10px;
     border-radius: 50%;
     text-decoration: none;
     text-align: center;
