@@ -20,7 +20,7 @@ body {
     bottom: 30px;
     right: 30px;
     display: none;
-    background: linear-gradient(#06aea8,#000000);
+    background: linear-gradient(#06aea8, #000000);
     color: white;
     border: none;
     padding: 10px 18px;
@@ -29,33 +29,33 @@ body {
     cursor: pointer;
     z-index: 1000;
     transition: all 0.4s ease;
-  }
+}
 
-  #scrollTopBtn:hover{
+#scrollTopBtn:hover {
     scale: 1.2;
-box-shadow: 5px 5px 10px #A2A2A2;
-  }
+    box-shadow: 5px 5px 10px #A2A2A2;
+}
 
-  #scrollTopBtn.show {
+#scrollTopBtn.show {
     display: block;
     opacity: 1;
     visibility: visible;
-  }
+}
 
-  #scrollTopBtn.hide {
+#scrollTopBtn.hide {
     opacity: 0;
     visibility: hidden;
-  }
+}
 
-  .social-icons {
+.social-icons {
     position: fixed;
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
     z-index: 1000;
-  }
+}
 
-  .social-icons a {
+.social-icons a {
     display: block;
     margin: 10px 0;
     font-size: 20px;
@@ -67,20 +67,22 @@ box-shadow: 5px 5px 10px #A2A2A2;
     text-decoration: none;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
+}
 
-  .social-icons a:nth-child(1):hover {
+.social-icons a:nth-child(1):hover {
     background-color: #1877F2;
     transform: scale(1.1);
-  }
-  .social-icons a:nth-child(2):hover {
+}
+
+.social-icons a:nth-child(2):hover {
     background-color: #d62976;
     transform: scale(1.1);
-  }
-  .social-icons a:nth-child(3):hover {
+}
+
+.social-icons a:nth-child(3):hover {
     background-color: #25D366;
     transform: scale(1.1);
-  }
+}
 
 header .top-head {
     padding: 1rem 0;
@@ -110,10 +112,9 @@ header .main-head {}
     display: none;
 } */
 
-
-
 .hero-banner {
     overflow: hidden;
+    min-height: 90vh;
 }
 
 .hero-banner-content {
@@ -697,25 +698,29 @@ header .main-head {}
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #06aea8b4; /* Dark background */
+    background-color: #06aea8b4;
+    /* Dark background */
     color: #fff;
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    z-index: 10; /* Ensure it sits above other content */
+    z-index: 10;
+    /* Ensure it sits above other content */
 }
 
 /* Overlay content styling */
 .overlay-content {
     text-align: center;
     padding: 2rem;
-    background-color: #333; /* Background color of the overlay content */
+    background-color: #333;
+    /* Background color of the overlay content */
     border-radius: 8px;
     max-width: 80%;
 }
 
-.overlay-content p{
+.overlay-content p {
     font-size: 10px;
 }
 
@@ -769,6 +774,12 @@ header .main-head {}
     height: 100%;
     transition: all 0.5s ease-in-out;
     background: white;
+}
+
+.lva-ser-card a {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
 }
 
 .lva-ser-card:hover {
