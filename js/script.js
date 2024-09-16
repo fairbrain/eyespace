@@ -99,17 +99,28 @@ window.onscroll = function () {
 var navbar = document.getElementById("main-head");
 
 // Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+var sticky = 200;
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// Add the sticky class to the navbar when you reach its scroll position.
+// Remove "sticky" when you leave the scroll position
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("fixed-top");
     navbar.classList.add("bg-white");
   } else {
     navbar.classList.remove("fixed-top");
+    navbar.classList.remove("bg-white");
   }
 }
+
+// Call the function when the page is scrolled
+window.onscroll = function() {
+  myFunction();
+};
+
+// Optional: Call the function once when the page loads to handle initial positioning
+myFunction();
+
 
 $(".hero-banner-slider").slick({
   dots: true,

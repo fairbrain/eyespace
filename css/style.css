@@ -102,6 +102,10 @@ header .social-media a {
     font-size: 0.8rem;
 }
 
+#main-head {
+    transition: all 0.3s ease; /* Adjust duration and easing as needed */
+  }
+
 
 
 
