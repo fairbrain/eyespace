@@ -1,35 +1,53 @@
-$(document).ready(function() {
+const lenis = new Lenis();
+
+// lenis.on("scroll", (e) => {
+//   console.log(e);
+// });
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+$(document).ready(function () {
   let modalShown = false;
 
-  $(window).on('scroll', function() {
-    if (!modalShown && $(window).scrollTop() > 500) { // Adjust this value to when the modal should appear
-      $('#videoModal').modal('show');
+  $(window).on("scroll", function () {
+    if (!modalShown && $(window).scrollTop() > 500) {
+      // Adjust this value to when the modal should appear
+      $("#videoModal").modal("show");
       modalShown = true; // Ensure modal is shown only once per session
     }
   });
 
-  $('#videoModal').on('hidden.bs.modal', function () {
-    $('#videoIframe').attr('src', ''); // Stop the video
+  $("#videoModal").on("hidden.bs.modal", function () {
+    $("#videoIframe").attr("src", ""); // Stop the video
   });
 
-  $('#videoModal').on('shown.bs.modal', function () {
-    $('#videoIframe').attr('src', 'https://www.youtube.com/embed/mApUfvbyCLQ?si=lTiUxHSuCHG40Waq'); // Restore the video source
+  $("#videoModal").on("shown.bs.modal", function () {
+    $("#videoIframe").attr(
+      "src",
+      "https://www.youtube.com/embed/mApUfvbyCLQ?si=lTiUxHSuCHG40Waq"
+    ); // Restore the video source
   });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
   // Show/Hide the scroll-to-top button
-  $(window).on('scroll', function() {
-    if ($(this).scrollTop() > 300) { // Adjust this value to when the button should appear
-      $('#scrollTopBtn').removeClass('hide').addClass('show');
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 300) {
+      // Adjust this value to when the button should appear
+      $("#scrollTopBtn").removeClass("hide").addClass("show");
     } else {
-      $('#scrollTopBtn').removeClass('show').addClass('hide');
+      $("#scrollTopBtn").removeClass("show").addClass("hide");
     }
   });
 
   // Scroll to top when button is clicked
-  $('#scrollTopBtn').on('click', function() {
-    $('html, body').animate({scrollTop: 0}, '300');
+  $("#scrollTopBtn").on("click", function () {
+    $("html, body").animate({ scrollTop: 0 }, "300");
   });
 });
 

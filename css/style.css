@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html,
 body {
-
+    width: 100vw;
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
 }
+
+
 
 .bg-warning {
     background-color: #b7fffb !important;
@@ -50,7 +53,7 @@ body {
 .social-icons {
     position: fixed;
     top: 50%;
-    left: 20px;
+    right: 20px;
     transform: translateY(-50%);
     z-index: 1000;
 }
@@ -99,6 +102,14 @@ header .social-media a {
 
 header .main-head {}
 
+img{
+    transition: all 0.5s ease-in-out;
+}
+
+#main-head.fixed-top>div>a>img {
+    width: 150px;
+}
+
 /* .sticky {
     position: fixed;
     top: 0;
@@ -113,8 +124,14 @@ header .main-head {}
 } */
 
 .hero-banner {
+    background: url(../images/banner.png) no-repeat center/cover;
     overflow: hidden;
-    min-height: 90vh;
+}
+
+.slide-only-image {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-banner-content {
@@ -1902,12 +1919,12 @@ address a i {
         display: block;
         position: absolute;
         left: 50%;
-        top: 9%;
+        top: 100%;
         transform: translateX(-50%)
     }
 
     .why-partners h2::after {
-        top: 2%;
+        top: 100%;
         width: 200px;
     }
 

@@ -17,13 +17,13 @@
     <link rel="stylesheet" href="./css/animate.css" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
 </head>
 
 <body>
     <!-- HEADER -->
     <header>
-        <div class="top-head">
+        <div class="top-head d-md-block d-none">
             <div class="container d-flex align-items-center justify-content-between">
                 <div class="contact">
                     <a href="#" class="phone"><i class="fa-solid fa-phone-volume me-1"></i>9073939914</a>
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="middle-head ">
+        <div class="middle-head " id="main-head">
             <div class="container py-3 d-flex align-items-center justify-content-between">
                 <a href="index.html"><img src="./images/Capture.PNG" alt="logo" class="img-fluid"></a>
                 <div class="d-md-block d-none">
@@ -51,79 +51,122 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="main-head bg-white" id="main-head">
-            <hr class="w-75 mx-auto">
-            <nav class="navbar navbar-expand-lg p-0">
-                <div class="container">
-                    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About Us</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Our Services
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Service 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Service 2</a></li>
-                                    <li><a class="dropdown-item" href="#">Service 3</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Our Doctors</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Optical Store
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Store 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Store 2</a></li>
-                                    <li><a class="dropdown-item" href="#">Store 3</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Gallery</a>
-                            </li>
-                        </ul>
+            <div class="main-head bg-white">
+                <hr class="w-75 mx-auto">
+                <nav class="navbar navbar-expand-lg p-0">
+                    <div class="container">
+                        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About Us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Our Services
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Service 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Service 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Service 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Our Doctors</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Optical Store
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Store 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Store 2</a></li>
+                                        <li><a class="dropdown-item" href="#">Store 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Gallery</a>
+                                </li>
+                            </ul>
 
+                        </div>
                     </div>
-                </div>
-            </nav>
-            <hr class="w-75 mx-auto">
+                </nav>
+                <hr class="w-75 mx-auto">
+            </div>
         </div>
+
     </header>
     <!-- HEADER -->
     <!-- MAIN content -->
     <main>
         <section class="hero-section-wrapper mb-5 position-relative">
             <div class="hero-banner-slider wow bounceInUp">
-                <!-- First Slide -->
-                <div class="hero-banner position-relative">
-                    <img src="./images/banner/banner-1.jpg" alt="Background Hero Image" class="bg-hero img-fluid">
 
+                <div class="hero-banner position-relative">
+                    <img src="./images/banner.png" alt="Background Hero Image" class="bg-hero img-fluid">
+                    <div class="row position-absolute z-3 top-0 w-100 align-items-center">
+                        <div class="col-md-6">
+                            <div class="hero-banner-left">
+                                <img src="./images/B-BLACK-01.png" alt="Logo" width="300" class="py-2 px-5">
+                                <p class="hero-banner-content mt-5">
+                                    WE TAKE CARE <br>
+                                    <span class="one">OF YOUR EYES</span> <br>
+                                    <span class="two">DIAGNOSTIC SOLUTIONS</span>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-end px-0 pt-5">
+                            <img src="./images/banner-right-1.png" alt="Banner Right Image 1"
+                                class="d-inline-block w-60 mb-3 banner-right-image-1">
+                            <img src="./images/banner-right-2.png" alt="Banner Right Image 2"
+                                class="d-inline w-75 banner-right-image-2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- First Slide -->
+                <div class="hero-banner position-relative slide-only-image">
+                    <img src="./images/banner/banner-1.jpg" alt="Background Hero Image" class="img-fluid">
+
+                </div>
+
+                <div class="hero-banner position-relative">
+                    <img src="./images/banner.png" alt="Background Hero Image" class="bg-hero img-fluid">
+                    <div class="row position-absolute z-3 top-0 w-100 align-items-center">
+                        <div class="col-md-6">
+                            <div class="hero-banner-left">
+                                <img src="./images/B-BLACK-01.png" alt="Logo" width="300" class="img-fluid py-2 px-5">
+                                <p class="hero-banner-content mt-5">
+                                    SEEING IS <br>
+                                    <span class="one">BELIEVING</span> <br>
+                                    <span class="two">TRUSTED EYECARE</span>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-end px-0 pt-5">
+                            <img src="./images/banner-right-1.png" alt="Banner Right Image 1"
+                                class="d-inline-block w-60 mb-3 banner-right-image-1">
+                            <img src="./images/banner-right-2.png" alt="Banner Right Image 2"
+                                class="d-inline w-75 banner-right-image-2">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Second Slide -->
-                <div class="hero-banner position-relative">
-                    <img src="./images/banner/banner-2.jpg" alt="Background Hero Image" class="bg-hero img-fluid">
-                </div>
-
-                <!-- Third Slide -->
-                <div class="hero-banner position-relative">
-                    <img src="./images/banner/banner-1.jpg" alt="Background Hero Image" class="bg-hero img-fluid">
+                <div class="hero-banner position-relative slide-only-image">
+                    <img src="./images/banner/banner-2.jpg" alt="Background Hero Image" class="img-fluid">
                 </div>
 
             </div>
@@ -1611,7 +1654,7 @@
                         <div class="director-card">
                             <img src="./images/dir-2.jpeg" alt="director-image" class="img-fluid">
                             <p>Debashis<br> Ghosh
-                                </p>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1838,6 +1881,11 @@
             <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp"><i class="ri-whatsapp-fill"></i></a>
         </div>
     </footer>
+
+
+
+
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -1852,6 +1900,7 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="./js/script.js"></script>
+
 
 </body>
 
