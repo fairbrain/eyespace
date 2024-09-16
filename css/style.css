@@ -87,6 +87,8 @@ body {
     transform: scale(1.1);
 }
 
+
+
 header .top-head {
     padding: 1rem 0;
     box-shadow: 5px 0 20px rgb(211, 211, 211);
@@ -100,7 +102,8 @@ header .social-media a {
     font-size: 0.8rem;
 }
 
-header .main-head {}
+
+
 
 img{
     transition: all 0.5s ease-in-out;
