@@ -103,13 +103,14 @@ header .social-media a {
 }
 
 #main-head {
-    transition: all 0.3s ease; /* Adjust duration and easing as needed */
-  }
+    transition: all 0.3s ease;
+    /* Adjust duration and easing as needed */
+}
 
 
 
 
-img{
+img {
     transition: all 0.5s ease-in-out;
 }
 
@@ -991,7 +992,6 @@ img{
 
 .our-director {
     background: url(../images/director\ bg.png) no-repeat bottom/cover;
-    background-position-x: -20px;
 }
 
 .director-card {
@@ -1002,11 +1002,19 @@ img{
     box-shadow: 0 0 10px gray;
 }
 
+.director-card img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+}
+
 .director-card:hover {
     scale: 1.1;
 }
 
-.director-card p {
+.director-card p.title {
     background: white;
     color: #369585;
     font-size: 32px;
@@ -1015,6 +1023,16 @@ img{
     line-height: 40px;
     padding: 20px 0;
     margin: 0;
+}
+
+.director-card p.designation {
+    background: white;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 800;
 }
 
 .shooter-lens {
