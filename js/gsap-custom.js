@@ -28,8 +28,8 @@ document.querySelectorAll("section").forEach((section) => {
       .timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top 50%",
-          end: "50% 50%",
+          start: "top 70%",
+          end: "bottom 70%",
           scrub: 1,
           // markers: true, // Uncomment for debugging
         },
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Animate sections on scroll
   gsap.utils
     .toArray(
-      ".more-stores, .low-vision-aids, .why-partners, .partners, .callback"
+      ".more-stores, .low-vision-aids, .callback"
     )
     .forEach((section) => {
       gsap.from(section, {
@@ -144,3 +144,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Initialize GSAP with ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+
+// Another animation for the "management-program" section
+gsap.from(".management-program ul li", {
+  opacity: 0,
+  x: -100, // Move the elements from the left
+  stagger: 0.3,
+  duration: 1.2,
+  scrollTrigger: {
+    trigger: ".management-program",
+    start: "top 75%",
+    toggleActions: "play none none reverse",
+    markers: false
+  }
+});
+
