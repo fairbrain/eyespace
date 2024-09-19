@@ -154,7 +154,7 @@ gsap.from(".management-program ul li", {
   opacity: 0,
   x: -100, // Move the elements from the left
   stagger: 0.3,
-  duration: 1.2,
+  duration: 0.3,
   scrollTrigger: {
     trigger: ".management-program",
     start: "top 75%",
