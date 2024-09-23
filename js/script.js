@@ -68,6 +68,10 @@ var swiper = new Swiper(".happy-customers-slider", {
     320: {
       slidesPerView: 1,
       spaceBetween: 10,
+      autoplay: {
+        delay: 3000,      // Delay between slides in milliseconds (3 seconds)
+        disableOnInteraction: false, // Autoplay will not stop after user interaction
+      },
     },
     // when window width is >= 480px
     480: {

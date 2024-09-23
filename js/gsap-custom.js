@@ -163,3 +163,22 @@ gsap.from(".management-program ul li", {
   }
 });
 
+const stores = document.querySelectorAll('.store-image');
+
+    // Loop over each store
+    stores.forEach((store, index) => {
+        gsap.from(store, {
+            opacity: 0,
+            y: 50, // Slide up animation
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: store,
+                start: 'top 80%', // When the store is 80% from the top of the viewport
+                toggleActions: 'play none none none', // Only play the animation once
+                markers: false // Set to true to see the trigger points
+            },
+            delay: index * 0.1 // Add slight stagger for each store
+        });
+    });
+
