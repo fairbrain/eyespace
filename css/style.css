@@ -2176,7 +2176,7 @@ color: #A2A2A2;
     padding-top: 15px;
     transform: translate(-50%, -20%);
     text-wrap: nowrap;
-    background: linear-gradient(90deg, #00634fc1, #06cac4, #00634fc1);
+    background: linear-gradient(90deg, #00634fc1, #06fff7, #00634fc1);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -2196,7 +2196,7 @@ color: #A2A2A2;
 }
 
 .store-title {
-    font-size: calc(1vw + 1vh + 0.5vmin);
+    font-size: calc(0.5vw + 1vh + 0.5vmin);
 }
 
 .store-description{
@@ -2213,5 +2213,8 @@ color: #A2A2A2;
     .store-description{
         font-size: calc(0.4rem + 0.25vw);
         top: 73%;
+    }
+    .store-title {
+        font-size: calc(1vw + 1vh + 0.5vmin);
     }
 }
