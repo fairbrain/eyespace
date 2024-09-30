@@ -1,4 +1,7 @@
 const lenis = new Lenis();
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
 
 // lenis.on("scroll", (e) => {
 //   console.log(e);
