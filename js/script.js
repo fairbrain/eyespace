@@ -16,7 +16,9 @@ $(document).ready(function () {
   let modalShown = false;
 
   $(window).on("scroll", function () {
-    if (!modalShown && $(window).scrollTop() > 500) {
+    console.log($(window).scrollTop());
+    
+    if (!modalShown && $(window).scrollTop() > 4000) {
       // Adjust this value to when the modal should appear
       $("#videoModal").modal("show");
       modalShown = true; // Ensure modal is shown only once per session
